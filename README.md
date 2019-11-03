@@ -6,23 +6,28 @@ Compile and run application. In order to test, send POST requests to: localhost:
 with JSON body including country and device arrays.
 
 Example requests:</br>
-POST localhost:8080/search</br>
-```json{
+```json
+POST localhost:8080/search
+
+{
 	"country":["US"],
 	"device":["ALL"]
 }
 ```
 
-</br>
+```json
 POST localhost:8080/search
-```json{
+
+{
 	"country":["US","JP"],
 	"device":["iphone 4","iphone 5"]
 }
 ```
-</br>
+
+```json
 POST localhost:8080/search
-```json{
+
+{
 	"country":["US"]
 }
 ```
