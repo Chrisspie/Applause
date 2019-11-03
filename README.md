@@ -31,3 +31,5 @@ POST localhost:8080/search
 	"country":["US"]
 }
 ```
+
+author: Krzysztof Pietrowicz
