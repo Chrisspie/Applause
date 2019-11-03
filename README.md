@@ -15,16 +15,14 @@ POST localhost:8080/search</br>
 
 </br>
 POST localhost:8080/search
-```json
-{
+```json{
 	"country":["US","JP"],
 	"device":["iphone 4","iphone 5"]
 }
 ```
 </br>
 POST localhost:8080/search
-```json
-{
+```json{
 	"country":["US"]
 }
 ```
