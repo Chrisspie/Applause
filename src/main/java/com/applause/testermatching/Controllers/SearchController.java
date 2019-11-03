@@ -1,7 +1,7 @@
 package com.applause.testermatching.Controllers;
 
+import com.applause.testermatching.Model.Dto.TesterWithExperience;
 import com.applause.testermatching.Model.SearchCriteria;
-import com.applause.testermatching.Model.Tester;
 import com.applause.testermatching.Services.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +20,7 @@ public class SearchController {
     }
 
     @PostMapping
-    public List<Tester> search(@RequestBody SearchCriteria searchCriteria) {
+    public List<TesterWithExperience> search(@RequestBody SearchCriteria searchCriteria) {
         return searchService.findByCountryAndDevice(searchCriteria);
     }
 }

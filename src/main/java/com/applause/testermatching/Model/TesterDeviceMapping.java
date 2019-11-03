@@ -1,12 +1,19 @@
 package com.applause.testermatching.Model;
 
 import com.univocity.parsers.annotations.Parsed;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
-@Getter
-@Setter
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Data
+@Entity
 public class TesterDeviceMapping {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
     @Parsed
     private Long testerId;
     @Parsed
