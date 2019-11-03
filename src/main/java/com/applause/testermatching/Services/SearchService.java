@@ -22,11 +22,11 @@ public class SearchService {
         List<String> searchCriteriaCountry = searchCriteria.getCountry();
         List<String> searchCriteriaDevice = searchCriteria.getDevice();
 
-        if (searchCriteriaCountry.contains("ALL")) {
+        if (searchCriteriaCountry==null || searchCriteriaCountry.contains("ALL")) {
             searchCriteriaCountry = null;
         }
 
-        if (searchCriteriaDevice.contains("ALL")) {
+        if (searchCriteriaDevice==null || searchCriteriaDevice.contains("ALL")) {
             searchCriteriaDevice = null;
         }
         List<Object[]> testers = testerRepository.findTestersByCountryAndDeviceDescriptionOrderByBugs(searchCriteriaCountry, searchCriteriaDevice);
